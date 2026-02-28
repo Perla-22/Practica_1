@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de CVs | Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-left">
+                <button id="menu-toggle" class="icon-btn" title="Ocultar/Mostrar Menú">☰</button>
+                <div class="logo">Portafolio de CVs</div>
+            </div>
+            <ul class="nav-links">
+                <li><button id="theme-toggle" class="btn-outline">Modo Oscuro</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <aside id="sidebar" class="sidebar">
+            <h3>CV's</h3>
+            <ul id="cv-menu">
+                <li><button class="cv-btn active" data-target="cv-cristina">Cristina</button></li>
+                <li><button class="cv-btn" data-target="cv-itzel">Itzel</button></li>
+                <li><button class="cv-btn" data-target="cv-jose">José</button></li>
+                <li><button class="cv-btn" data-target="cv-fer">Fer</button></li>
+            </ul>
+        </aside>
+
+        <section class="cv-viewer">
+            
+            <article id="cv-cristina" class="cv-document active">
+                <div class="cv-header">
+                    <div class="placeholder-pic">C</div>
+                    <div>
+                        <h2>Cristina</h2>
+                        <p class="subtitle">Ingeniería en Telemática</p>
+                    </div>
+                </div>
+                <div class="cv-body">
+                    <h3>Proyectos Destacados</h3>
+                    <ul>
+                        <li>Desarrollo de plataforma <strong>Eventify</strong>.</li>
+                        <li>Diseño e implementación de <strong>CelularesRex</strong>.</li>
+                    </ul>
+                    <h3>Habilidades</h3>
+                    <p>Desarrollo Web, Señales y Sistemas, Mecanizado CNC.</p>
+                </div>
+            </article>
+
+            <article id="cv-itzel" class="cv-document">
+                <div class="cv-header">
+                    <div class="placeholder-pic">I</div>
+                    <div>
+                        <h2>Itzel</h2>
+                        <p class="subtitle">Desarrollo Frontend</p>
+                    </div>
+                </div>
+                <div class="cv-body">
+                    <h3>Experiencia</h3>
+                    <p>Especialista en interfaces de usuario y experiencia de usuario (UX/UI).</p>
+                </div>
+            </article>
+
+            <article id="cv-jose" class="cv-document">
+                <div class="cv-header">
+                    <div class="placeholder-pic">J</div>
+                    <div>
+                        <h2>José</h2>
+                        <p class="subtitle">Administración de Servidores</p>
+                    </div>
+                </div>
+                <div class="cv-body">
+                    <h3>Habilidades</h3>
+                    <p>Gestión de bases de datos, redes y protocolos de comunicación.</p>
+                </div>
+            </article>
+
+            <article id="cv-fer" class="cv-document">
+                <div class="cv-header">
+                    <div class="placeholder-pic">F</div>
+                    <div>
+                        <h2>Fernanda</h2>
+                        <p class="subtitle">Especialista en Seguridad y Redes</p>
+                    </div>
+                </div>
+                <div class="cv-body">
+                    <h3>Certificaciones</h3>
+                    <p>Manejo avanzado de infraestructura y ciberseguridad.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

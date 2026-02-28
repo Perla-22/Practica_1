@@ -1,0 +1,218 @@
+:root {
+    /* Modo Claro */
+    --bg-color: #f0f4f8;
+    --text-color: #102a43;
+    --primary-color: #0056b3;
+    --primary-hover: #004494;
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: #dce4ec;
+    --sidebar-bg: #e1e8f0;
+    --active-bg: #0056b3;
+    --active-text: #ffffff;
+}
+
+[data-theme="dark"] {
+    /* Modo Oscuro */
+    --bg-color: #0b1120;
+    --text-color: #e2e8f0;
+    --primary-color: #38bdf8;
+    --primary-hover: #7dd3fc;
+    --nav-bg: #1e293b;
+    --card-bg: #1e293b;
+    --border-color: #334155;
+    --sidebar-bg: #0f172a;
+    --active-bg: #38bdf8;
+    --active-text: #0f172a;
+}
+
+/*Reseteo y Estilos Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    line-height: 1.6;
+}
+
+/*Navegación (Header)*/
+header {
+    background-color: var(--nav-bg);
+    border-bottom: 1px solid var(--border-color);
+    padding: 0.8rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav, .nav-left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.icon-btn, .btn-outline {
+    background: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover, .btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--active-text);
+    border-color: var(--primary-color);
+}
+
+/*Dashboard y Menú Plegable*/
+.dashboard {
+    display: flex;
+    min-height: calc(100vh - 60px);
+    overflow-x: hidden;
+}
+
+.sidebar {
+    width: 280px;
+    background-color: var(--sidebar-bg);
+    border-right: 1px solid var(--border-color);
+    padding: 20px;
+    transition: transform 0.3s ease, width 0.3s ease, padding 0.3s ease;
+    flex-shrink: 0;
+}
+
+/* Clase que se activa con JS para ocultar el menú */
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+    transform: translateX(-100%);
+    border: none;
+}
+
+.sidebar h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#cv-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.cv-btn {
+    width: 100%;
+    text-align: left;
+    padding: 12px 15px;
+    background: transparent;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.cv-btn:hover {
+    background-color: rgba(0, 86, 179, 0.1);
+}
+
+.cv-btn.active {
+    background-color: var(--active-bg);
+    color: var(--active-text);
+}
+
+/*Visor de CV*/
+.cv-viewer {
+    flex-grow: 1;
+    padding: 40px;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+.cv-document {
+    display: none;
+    background-color: var(--card-bg);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    animation: slideIn 0.4s ease;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cv-document.active { display: block; }
+
+.cv-header {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--bg-color);
+}
+
+.placeholder-pic {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: var(--active-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.subtitle { color: var(--primary-color); font-weight: 500; }
+
+.cv-body h3 {
+    margin: 20px 0 10px;
+    color: var(--text-color);
+}
+
+.cv-body ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/*Responsive (Celulares)*/
+@media (max-width: 768px) {
+    .sidebar {
+        position: fixed;
+        height: 100%;
+        z-index: 50;
+        box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+        /* Por defecto oculto en celular */
+        transform: translateX(-100%); 
+        width: 250px;
+    }
+    .sidebar.open {
+        transform: translateX(0);
+    }
+    .cv-viewer { padding: 20px; }
+    .cv-document { padding: 20px; }
+}
