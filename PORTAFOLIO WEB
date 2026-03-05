@@ -1,0 +1,42 @@
+# Gestor de CVs y Portafolio
+
+## Descripción del proyecto
+Este proyecto consiste en una página web interactiva que permite visualizar diferentes currículums (CV) de manera organizada y dinámica. Además, incluye una sección de portafolio donde se muestran algunas evidencias del desarrollo del proyecto.
+
+La página fue desarrollada como práctica académica utilizando tecnologías básicas de desarrollo web.
+
+## Tecnologías utilizadas
+- HTML5
+- CSS3
+- JavaScript
+
+## Funcionalidades principales
+- Visualización de múltiples CV dentro de una misma página.
+- Menú lateral para seleccionar diferentes currículums.
+- Sección de portafolio con evidencias del proyecto.
+- Navegación dinámica entre secciones (CV y Portafolio).
+- Implementación de modo oscuro utilizando JavaScript.
+- Guardado de preferencia de tema con localStorage.
+- Interfaz adaptable a diferentes tamaños de pantalla.
+
+## Estructura del proyecto
+/proyecto-cv  
+│  
+├── index.html → Estructura principal de la página  
+├── styles.css → Estilos y diseño visual  
+├── script.js → Funcionalidad e interacción con JavaScript  
+└── README.md → Documentación del proyecto  
+
+## Objetivo del proyecto
+El objetivo de este proyecto es aplicar conocimientos básicos de desarrollo web para crear una página que permita organizar y mostrar información profesional de diferentes personas mediante currículums digitales.
+
+También se busca practicar:
+- Estructuración de páginas web con HTML
+- Estilos visuales con CSS
+- Manipulación del DOM con JavaScript
+- Organización básica de un proyecto web
+
+## Autor
+Proyecto desarrollado como práctica académica.  
+Estudiantes FERNADEZ BLANCAS PERLA CRISTEL 
+            CUEVAS VAZQUEZ MAURICIO
