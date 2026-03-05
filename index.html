@@ -1,140 +1,152 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestor de CVs | Portafolio</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gestor de CVs | Portafolio</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <div class="nav-left">
-                <button id="menu-toggle" class="icon-btn" title="Ocultar/Mostrar Menú">☰</button>
-                <div class="logo">Portafolio de CVs</div>
-            </div>
-            <ul class="nav-links">
-                <li><button id="theme-toggle" class="btn-outline">Modo Oscuro</button></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="dashboard">
-        <aside id="sidebar" class="sidebar">
-            <h3>CV's</h3>
-            <ul id="cv-menu">
-                <li><button class="cv-btn active" data-target="cv-cristina">Cristina</button></li>
-                <li><button class="cv-btn" data-target="cv-itzel">Itzel</button></li>
-                <li><button class="cv-btn" data-target="cv-jose">José</button></li>
-                <li><button class="cv-btn" data-target="cv-fer">Fer</button></li>
-            </ul>
-        </aside>
+<header>
+<nav>
 
-        <section class="cv-viewer">
-            
-            <article id="cv-cristina" class="cv-document active">
-                <div class="cv-header">
-                    <div class="placeholder-pic">C</div>
-                    <div>
-                        <h2>Cristina</h2>
-                        <p class="subtitle">Ingeniería en Telemática</p>
-                    </div>
-                </div>
-                <div class="cv-body">
-                    <h3>Proyectos Destacados</h3>
-                    <ul>
-                        <li>Desarrollo de plataforma <strong>Eventify</strong>.</li>
-                        <li>Diseño e implementación de <strong>CelularesRex</strong>.</li>
-                    </ul>
-                    <h3>Habilidades</h3>
-                    <p>Desarrollo Web, Señales y Sistemas, Mecanizado CNC.</p>
+<div class="nav-left">
+<button id="menu-toggle" class="icon-btn">☰</button>
+<div class="logo">Portafolio de CVs</div>
+</div>
 
-                    <h3>Experiencia</h3>
-                    <p>Participación en proyectos académicos enfocados en telecomunicaciones y desarrollo de software.</p>
+<div class="nav-right">
+<button class="menu-btn" data-target="seccion-cv">CV</button>
+<button class="menu-btn" data-target="seccion-portafolio">Portafolio</button>
+<button id="theme-toggle">Modo Oscuro</button>
+</div>
 
-                    <h3>Educación</h3>
-                    <p>Estudiante de Ingeniería en Telemática con enfoque en redes y sistemas digitales.</p>
+</nav>
+</header>
 
-                    <h3>Contacto</h3>
-                    <p>Email: cristina@email.com | Tel: 55 1234 5678</p>
-                </div>
-            </article>
+<main class="dashboard">
 
-            <article id="cv-itzel" class="cv-document">
-                <div class="cv-header">
-                    <div class="placeholder-pic">I</div>
-                    <div>
-                        <h2>Itzel</h2>
-                        <p class="subtitle">Desarrollo Frontend</p>
-                    </div>
-                </div>
-                <div class="cv-body">
-                    <h3>Experiencia</h3>
-                    <p>Especialista en interfaces de usuario y experiencia de usuario (UX/UI).</p>
+<!-- SIDEBAR CV -->
+<aside id="sidebar" class="sidebar">
 
-                    <h3>Habilidades</h3>
-                    <p>HTML, CSS, JavaScript, diseño responsivo y prototipado en Figma.</p>
+<h3>CVs</h3>
 
-                    <h3>Proyectos</h3>
-                    <ul>
-                        <li>Diseño de interfaces modernas para aplicaciones web.</li>
-                        <li>Optimización de experiencia de usuario en plataformas digitales.</li>
-                    </ul>
+<ul id="cv-menu">
+<li><button class="cv-btn active" data-target="cv-cristina">Cristina</button></li>
+<li><button class="cv-btn" data-target="cv-itzel">Itzel</button></li>
+<li><button class="cv-btn" data-target="cv-jose">José</button></li>
+<li><button class="cv-btn" data-target="cv-fer">Fer</button></li>
+</ul>
 
-                    <h3>Contacto</h3>
-                    <p>Email: itzel@email.com | Portafolio: www.portafolio-itzel.com</p>
-                </div>
-            </article>
+</aside>
 
-            <article id="cv-jose" class="cv-document">
-                <div class="cv-header">
-                    <div class="placeholder-pic">J</div>
-                    <div>
-                        <h2>José</h2>
-                        <p class="subtitle">Administración de Servidores</p>
-                    </div>
-                </div>
-                <div class="cv-body">
-                    <h3>Habilidades</h3>
-                    <p>Gestión de bases de datos, redes y protocolos de comunicación.</p>
 
-                    <h3>Experiencia</h3>
-                    <p>Administración de servidores Linux y configuración de redes empresariales.</p>
+<section class="content">
 
-                    <h3>Certificaciones</h3>
-                    <p>Certificación en redes y seguridad informática.</p>
+<!-- SECCION CV -->
+<div id="seccion-cv" class="main-section">
 
-                    <h3>Contacto</h3>
-                    <p>Email: jose@email.com | Tel: 55 8765 4321</p>
-                </div>
-            </article>
+<section class="cv-viewer">
 
-            <article id="cv-fer" class="cv-document">
-                <div class="cv-header">
-                    <div class="placeholder-pic">F</div>
-                    <div>
-                        <h2>Fernanda</h2>
-                        <p class="subtitle">Especialista en Seguridad y Redes</p>
-                    </div>
-                </div>
-                <div class="cv-body">
-                    <h3>Certificaciones</h3>
-                    <p>Manejo avanzado de infraestructura y ciberseguridad.</p>
+<article id="cv-cristina" class="cv-document active">
 
-                    <h3>Experiencia</h3>
-                    <p>Implementación de sistemas de seguridad y monitoreo de redes.</p>
+<h2>Cristina</h2>
+<p>Ingeniería en Telemática</p>
 
-                    <h3>Habilidades</h3>
-                    <p>Firewall, análisis de vulnerabilidades, criptografía básica y gestión de riesgos.</p>
+<h3>Proyectos</h3>
+<ul>
+<li>Plataforma Eventify</li>
+<li>Sistema CelularesRex</li>
+</ul>
 
-                    <h3>Contacto</h3>
-                    <p>Email: fernanda@email.com | LinkedIn: linkedin.com/fernanda</p>
-                </div>
-            </article>
+<h3>Habilidades</h3>
+<p>HTML, Redes, Sistemas Digitales</p>
 
-        </section>
-    </main>
+</article>
 
-    <script src="script.js"></script>
+
+<article id="cv-itzel" class="cv-document">
+
+<h2>Itzel</h2>
+<p>Desarrollo Frontend</p>
+
+<h3>Habilidades</h3>
+<p>HTML, CSS, JavaScript, UX/UI</p>
+
+<h3>Proyectos</h3>
+<ul>
+<li>Interfaces Web</li>
+<li>Diseño responsivo</li>
+</ul>
+
+</article>
+
+
+<article id="cv-jose" class="cv-document">
+
+<h2>José</h2>
+<p>Administrador de Servidores</p>
+
+<h3>Habilidades</h3>
+<p>Linux, Redes, Bases de Datos</p>
+
+</article>
+
+
+<article id="cv-fer" class="cv-document">
+
+<h2>Fernanda</h2>
+<p>Seguridad en Redes</p>
+
+<h3>Habilidades</h3>
+<p>Ciberseguridad, Firewalls, Monitoreo</p>
+
+</article>
+
+</section>
+
+</div>
+
+
+<!-- SECCION PORTAFOLIO -->
+
+<div id="seccion-portafolio" class="main-section" style="display:none">
+
+<h2>Portafolio de Evidencias</h2>
+
+<div class="portfolio">
+
+<div class="card">
+<h3>Gestor de CV</h3>
+<p>Página web desarrollada con HTML, CSS y JavaScript.</p>
+</div>
+
+<div class="card">
+<h3>Modo Oscuro</h3>
+<p>Implementación usando JavaScript y localStorage.</p>
+</div>
+
+<div class="card">
+<h3>Menú Responsive</h3>
+<p>Menú adaptable para computadora y celular.</p>
+</div>
+
+<div class="card">
+<h3>Diseño de CV</h3>
+<p>Estructuración de currículums interactivos.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<script src="script.js"></script>
+
 </body>
 </html>
